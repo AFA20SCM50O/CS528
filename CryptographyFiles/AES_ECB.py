@@ -14,12 +14,12 @@ key=pad(key)
 key= key.encode('UTF-8')
 
 #encryption
-cipher = AES.new(key, AES.MODE_CBC)
+cipher = AES.new(key, AES.MODE_ECB)
 ciphertext = cipher.encrypt(plaintext)
 print('ciphertext is: ', ciphertext)
 
 #decryption
-cipher2= AES.new(key, AES.MODE_CBC)
+cipher2= AES.new(key, AES.MODE_ECB)
 data = cipher.decrypt(ciphertext)
 
 data = data.decode('UTF-8')
@@ -27,5 +27,3 @@ unpad = data.find('[')
 data = data[:unpad]
 
 print('decrypted plaintext= ', data)
-
-

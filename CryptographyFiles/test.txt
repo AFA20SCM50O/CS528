@@ -1,0 +1,23 @@
+A 10-paragraph Introduction to Ciphers
+It is difficult to say with certainty, but it seems probable that soon after mastering the art of writing, people started to feel the need to hide and mask what was written. Probably over time and with increasing importance of written messages, the need became stronger. First states were created and more and more important information had to be sent in writing over long distances. The information that should have remained undisclosed.
+
+A Brief History of Cryptography
+Initially, people tried to mask the fact of the existence of messages and not just their content. Such an action is called steganography. Over time the first simple substitution ciphers were invented. The idea was to replace some letters by other letters, in a way that is known only to privy parties.
+
+It should be noted here that alphabets created in Europe (Latin, Greek) turned out to be large facilitation. They contain relatively few letters, that are easy to manipulate. Using substitution ciphers for texts in Chinese is no longer so obvious.
+
+With the appearance of methods of breaking simple substitution ciphers, the ordinary exchange of letters became no longer strong enough. The new ciphers were invented. They allowed better mixing of letters, obscuring messages and corrupting typical language characteristics (letters frequency, popular pairs of characters). Besides substitution of letters, ciphers started to use transposition of letters.
+
+Cipher Construction
+At this stage a full model of building ciphers was developed. Having some long messages that should be encrypted, one knows a recipe (an algorithm) which is a list of steps to perform for changing plaintext letters into ciphertext characters. It is also necessary to choose a secret key. It will be used together with the selected algorithm. For example, the algorithm may be a sentence "move each letter right" and the secret key may be a phrase "by three positions".
+
+This distinction comes from the possibility to reduce the amount of information that have to be exchanged between interested parties. The number of positions of how much all letters should be moved is the most important information in this situation, while the information about the fact that the shift should be performed to the right is not crucial for message's security and can be transmitted at the beginning of the message without encryption. Moreover, such distinction allows to use the algorithm multiple times with different keys, for example during communication with different people.
+
+Current encryption algorithms operate on computers or electronic devices. Secret keys consist of tens of characters and during encryption and decryption millions of operations are performed. Encryption algorithms are part of larger algorithms, communication protocols and various standards. People have to deal with them quite often in many areas of their lives.
+
+Finally, let's notice two things. Firstly, the main benefit of using ciphers is the fact that secret keys are much shorter in comparison to amount of transmitted information. This allows to replace a difficult problem (providing in secret some long messages) by an easier challenge (providing in secret a shorter key; the key can be then used many times).
+
+Second, any algorithm may be publicly known or it may be secret. In theory, the latter option provides additional security. The general rule says that every cipher should be reliable and secure even after the full publication of its algorithm. Thus, one should always assume that an intruder knows everything about attacked systems, except their secret keys.
+
+Most modern ciphers base on publicly known algorithms. In practice, there are two arguments for this solution. First, after some time every algorithm usually becomes known - due to coincidence, bribery, betrayal, or analysis of equipment or software that use the cipher. Second, a publicly known algorithm can be tested and analysed by thousands of honest and wise people. If they find errors, they can publicly disclose the issues. Thus it is possible to improve the cipher and correct the algorithm.
+
