@@ -1,31 +1,26 @@
 from Crypto.Cipher import AES
-#padding necessary for AES to ensure Block is full
-def pad(entry):
-    padded = entry +(16-len(entry)%16)*'['
-    return(padded)
+from Crypto.Util.Padding import pad, unpad
 
-#plaintext with padding & encoded to bytes
-plaintext = 'Encryption is cool'
-plaintext = pad(plaintext)
-plaintext = plaintext.encode('UTF-8')
-#shared secret key with padding & encoded to bytes
-key='12345'
-key=pad(key)
-key= key.encode('UTF-8')
+key = b'mysecretpassword' #must be 16byte
 
-#encryption
 cipher = AES.new(key, AES.MODE_CBC)
-ciphertext = cipher.encrypt(plaintext)
-print('ciphertext is: ', ciphertext)
 
-#decryption
-cipher2= AES.new(key, AES.MODE_CBC)
-data = cipher.decrypt(ciphertext)
+plaintext = b'this is my secret message'
 
-data = data.decode('UTF-8')
-unpad = data.find('[')
-data = data[:unpad]
+ciphertext = cipher.encrypt(pad(plaintext, AES.block_size))
 
-print('decrypted plaintext= ', data)
+print(plaintext)
+print()
+print(ciphertext)
+print()
+#decryption = cipher.decrypt(unpad(ciphertext,AES.block_size))
+print('cipher iv used was: ',  cipher.iv)
+#print(decryption)\
+
+with open('cipher_file', 'wb') as c_file:
+    c_file.write(cipher.iv)
+    c_file.write(ciphertext)
+
+
 
 
