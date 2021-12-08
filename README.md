@@ -19,3 +19,4 @@ To build the project:
 5. Pip install pycrytodome
 6. Run the Encrypt Files first, then the decrypt Files
 7. If you run into issues with any of the programs you may need to change the paths for some of the files that are opened within the program
+8. or you could simply clone the repository - https://github.com/AFA20SCM50O/CS528.git 
