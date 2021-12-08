@@ -8,7 +8,7 @@ There exists a growing need for data protection and security as the world rapidl
 Cryptographic Encryption can be used to Encrypt various forms of files from images, files, text, and video. To ensure the privacy and safety of such files there exists various ciphers that can be applied as well as some different protocols. A few will be displayed in this project
 
 3.	Goal & Design
-This project shows the encryption, decryption, and potential attacks  through various ciphers (Caesar's, AES, RSA, MD5, symmetric, and asymmetric cryptosystems) and file types (text input, text file, images, and large data files)
+This project shows the encryption, decryption, and potential attacks  through various ciphers (Caesar's, AES, RSA, symmetric, and asymmetric cryptosystems) and file types (text input, text file, images, and large data files)
 
 To build the project:
 
