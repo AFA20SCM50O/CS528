@@ -1,9 +1,10 @@
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 from base64 import b64encode
+import getpass
 
 #prompt user for key input - Should be the same key for Bob and Alice in Symmetric Encryption System AES
-key = input('please import your secret key: ')
+key = getpass.getpass('please input your secret key: ')
 key = key.encode('UTF-8')
 key = pad(key,AES.block_size)
 
@@ -21,4 +22,4 @@ def encrypt(file_name, key):
     data.close()
 
 #the file we wish to encrypt
-encrypt('CryptographyFiles/test.txt', key)
+encrypt('CryptographyFiles/Alfred.png', key)
